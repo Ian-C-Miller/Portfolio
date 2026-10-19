@@ -16,7 +16,6 @@
             height: 140px;
             object-fit: cover;
             border-radius: 0.25rem;
-            display: block;
         }
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
@@ -37,6 +36,7 @@
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased selection:bg-blue-500 selection:text-white">
 
+    <!-- HERO / LANDING SECTION -->
     <header class="relative min-h-screen flex items-center justify-end px-6 py-20 bg-cover bg-center border-b border-gray-200" 
             style="background-image: url('aura-farm-1.jpg');">
         
@@ -65,9 +65,10 @@
         </div>
     </header>
 
+    <!-- SECTION 1: FEATURED PROJECTS -->
     <div id="projects" class="relative">
         
-        <!-- Clean, Organized Maker Wall Background Grid -->
+        <!-- Maker Wall Background Grid -->
         <div id="maker-wall-grid" class="sticky top-0 h-screen w-full z-0 bg-grid p-2 opacity-40 saturate-50 brightness-75 overflow-hidden pointer-events-none"></div>
 
         <div class="relative z-10 -mt-[100vh] max-w-6xl mx-auto px-6 py-32 space-y-20 md:space-y-36">
@@ -77,9 +78,10 @@
                     <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
                     Featured Projects
                 </h2>
-                <p class="text-gray-600 mt-2">Mechanical prototyping, bioprinting platforms, and embedded energy systems.</p>
+                <p class="text-gray-600 mt-2">Mechanical prototyping, bioprinting platforms, embedded electronics, and energy systems.</p>
             </div>
 
+            <!-- Project 1: Large Scale Fresh Bioprinter -->
             <article class="bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 flex flex-col md:flex-row gap-12 items-center">
                 <div class="flex-1 w-full">
                     <h3 class="text-3xl font-bold mb-3 text-gray-900">Large Scale Fresh Bioprinter</h3>
@@ -99,7 +101,7 @@
                     <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
                         <div class="w-full md:min-w-[85%] h-72 rounded-2xl overflow-hidden snap-center shrink-0 shadow-md bg-black relative">
                             <iframe 
-                                class="w-full h-full border-0 absolute inset-0" 
+                                class="absolute inset-0 w-full h-full border-0" 
                                 src="https://www.youtube.com/embed/46Vcbi3tDjc" 
                                 title="Large Scale FRESH Bioprinter Video" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -118,7 +120,34 @@
                 </div>
             </article>
 
+            <!-- Project 2: Porsche 944 MAF Modernization & Signal Converter (KiCAD SECTION) -->
             <article class="bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 flex flex-col md:flex-row-reverse gap-12 items-center">
+                <div class="flex-1 w-full">
+                    <h3 class="text-3xl font-bold mb-3 text-gray-900">Porsche 944 MAF Modernization & Signal Converter</h3>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-semibold rounded-full border border-purple-100">PCB Design (KiCAD)</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full border border-blue-100">STM32 Firmware</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-semibold rounded-full">Signal Conditioning</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-semibold rounded-full">Embedded C</span>
+                        <span class="px-3 py-1 bg-gray-100 text-xs font-semibold rounded-full">Automotive</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Designed and programmed an STM32G0 microcontroller PCB to condition modern Mass Air Flow (MAF) sensor signals and translate them into 12V Air Flow Meter (AFM) voltage curves required by early Porsche 944 Motronic DME engine management units.
+                    </p>
+                </div>
+                <div class="flex-1 w-full overflow-hidden relative group">
+                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-lg text-gray-700 font-bold opacity-0 group-hover:opacity-100 transition z-20 hover:bg-white" onclick="scrollCarousel(this, -300)">←</button>
+                    <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
+                        <img src="IMG_5467.jpg" alt="STM32G0 Porsche MAF Converter Assembled PCB" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="Full Schematic.png" alt="KiCAD Circuit Schematic Diagram" class="w-full md:min-w-[85%] h-72 object-contain bg-gray-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="Ground Plane.png" alt="KiCAD PCB Layout & Ground Plane" class="w-full md:min-w-[85%] h-72 object-contain bg-black rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
+                    </div>
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-lg text-gray-700 font-bold opacity-0 group-hover:opacity-100 transition z-20 hover:bg-white" onclick="scrollCarousel(this, 300)">→</button>
+                </div>
+            </article>
+
+            <!-- Project 3: Porsche 944 Restomod -->
+            <article class="bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 flex flex-col md:flex-row gap-12 items-center">
                 <div class="flex-1 w-full">
                     <h3 class="text-3xl font-bold mb-3 text-gray-900">944 Restomod</h3>
                     <div class="flex flex-wrap gap-2 mb-6">
@@ -135,62 +164,18 @@
                     <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-lg text-gray-700 font-bold opacity-0 group-hover:opacity-100 transition z-20 hover:bg-white" onclick="scrollCarousel(this, -300)">←</button>
                     <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
                         <img src="944-side-profile-farm.jpg" alt="Porsche 944 Farm Profile" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
+                        <img src="x_Gloss_paint.jpg" alt="Porsche 944 Fresh Green Paint Finish" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
+                        <img src="x_paintbooth.jpg" alt="Inflatable Paint Booth Workstation" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
+                        <img src="x_doorcard.jpg" alt="Custom Leather Porsche Door Card Assembly" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
+                        <img src="x_shift_knob.jpg" alt="Hand-turned Wooden Shift Knob Installed" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                         <img src="x_Primer.jpg" alt="Porsche 944 Wrapped for Primer in Garage" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                         <img src="x_under_car.jpg" alt="Working Underneath Car Drivetrain" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="x_doorcard.jpg" alt="Custom Tan and Green Leather Door Card Assembly" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="x_shift_knob.jpg" alt="Custom Segmented Wood Shift Knob Installed in 944 Interior" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="IMG_9062.jpg" alt="Porsche 944 Paint Booth Inflatable Tent" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="IMG_9064.jpg" alt="Porsche 944 Fresh Green Paint Front Fender" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="IMG_9271.jpg" alt="Engine Intake Port Preparation" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="IMG_9498.jpg" alt="Porsche 944 Jacked Up in Winter Sunset" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="5bcbb0b7.jpg" alt="Porsche 944 Autumn Exterior" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="3bb257d8.jpg" alt="Porsche 944 Engine Bay" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="2c5d74b0.jpg" alt="Porsche 944 Body Work" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="944-restomod-interior-1.jpg" alt="Porsche 944 Interior Stripped" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="944-restomod-interior-2.jpg" alt="Porsche 944 Interior Carpets" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="944-restomod-shifter.jpg" alt="Porsche 944 Custom Shifter" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="944-door-cards.jpg" alt="Porsche 944 Custom Door Cards" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="12bc95c2.jpg" alt="Porsche 944 3D Printed Parts" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="944-restomod-welding.jpg" alt="Porsche 944 Welding/Grinding" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="944-restomod-wheel-painting.jpg" alt="Porsche 944 Wheel Painting" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="944-restomod-wheels.jpg" alt="Porsche 944 Finished Wheels" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="944-wing-hood.jpg" alt="Porsche 944 Carbon Wing" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="944-wing-rear.jpg" alt="Porsche 944 Wing Installed" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="177595bf.jpg" alt="Porsche 944 Paint Booth" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="83416923.jpg" alt="Porsche 944 Fender Work" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="e14d57ac.jpg" alt="Porsche 944 Engine Bay Display" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                     </div>
                     <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-lg text-gray-700 font-bold opacity-0 group-hover:opacity-100 transition z-20 hover:bg-white" onclick="scrollCarousel(this, 300)">→</button>
                 </div>
             </article>
 
-            <article class="bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 flex flex-col md:flex-row gap-12 items-center">
-                <div class="flex-1 w-full">
-                    <h3 class="text-3xl font-bold mb-3 text-gray-900">Porsche 944 MAF Modernization & Signal Converter</h3>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 bg-sky-50 text-sky-700 text-xs font-semibold rounded-full border border-sky-100">STM32 Firmware</span>
-                        <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-semibold rounded-full border border-purple-100">PCB Design (KiCAD)</span>
-                        <span class="px-3 py-1 bg-gray-100 text-xs font-semibold rounded-full">Signal Conditioning</span>
-                        <span class="px-3 py-1 bg-gray-100 text-xs font-semibold rounded-full">Embedded C</span>
-                        <span class="px-3 py-1 bg-gray-100 text-xs font-semibold rounded-full">Automotive</span>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        Designed and programmed an STM32G0 microcontroller PCB to condition modern Mass Air Flow (MAF) sensor signals and translate them into 12V Air Flow Meter (AFM) voltage curves required by early Porsche 944 Motronic DME engine management units.
-                    </p>
-                </div>
-                <div class="flex-1 w-full overflow-hidden relative group">
-                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-lg text-gray-700 font-bold opacity-0 group-hover:opacity-100 transition z-20 hover:bg-white" onclick="scrollCarousel(this, -300)">←</button>
-                    <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
-                        <img src="IMG_5467.jpg" alt="Assembled Asymmetric Circuit Board with Automotive Connector" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="Ground Plane.png" alt="Signal Converter Ground Plane Routing in KiCAD" class="w-full md:min-w-[85%] h-72 object-contain bg-black rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
-                        <img src="Full Schematic.png" alt="Full Electrical Schematic Diagram for MAF Converter" class="w-full md:min-w-[85%] h-72 object-contain bg-white rounded-2xl snap-center shrink-0 border border-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
-                        <img src="x_intake_CAD.jpg" alt="MAF Sensor Housing and Adapter CAD" class="w-full md:min-w-[85%] h-72 object-contain bg-gray-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
-                        <img src="x_printed_intake.jpg" alt="3D Printed MAF Sensor Test Housing" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                    </div>
-                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-lg text-gray-700 font-bold opacity-0 group-hover:opacity-100 transition z-20 hover:bg-white" onclick="scrollCarousel(this, 300)">→</button>
-                </div>
-            </article>
-
+            <!-- Project 4: Bio Gas Engine CHP System -->
             <article class="bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 flex flex-col md:flex-row-reverse gap-12 items-center">
                 <div class="flex-1 w-full">
                     <h3 class="text-3xl font-bold mb-3 text-gray-900">Bio Gas Engine CHP System</h3>
@@ -208,11 +193,10 @@
                     <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-lg text-gray-700 font-bold opacity-0 group-hover:opacity-100 transition z-20 hover:bg-white" onclick="scrollCarousel(this, -300)">←</button>
                     <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
                         <img src="chp-diagram.png" alt="ICECHP System Diagram" class="w-full md:min-w-[85%] h-72 object-contain bg-white rounded-2xl snap-center shrink-0 border border-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
-                        <img src="x_gear_case.jpg" alt="Engine Crankcase Internal Helical Gears Assembly" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
-                        <img src="x_printed_intake.jpg" alt="3D Printed Velocity Stack Intake Manifold Component" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="x_intake_CAD.jpg" alt="Custom Dual Actuator Intake & Valve CAD Design" class="w-full md:min-w-[85%] h-72 object-contain bg-gray-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
-                        <img src="IMG_9656.jpg" alt="Engine Crankcase Internal Gear & Oil Assembly" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
-                        <img src="chp-intake.jpg" alt="Custom Intake CAD" class="w-full md:min-w-[85%] h-72 object-contain bg-gray-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="x_gear_case.jpg" alt="Engine Crankcase & Gear Internal Assembly" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="x_intake_CAD.jpg" alt="Engine Intake Manifold CAD Design" class="w-full md:min-w-[85%] h-72 object-contain bg-gray-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="x_printed_intake.jpg" alt="3D Printed Custom Intake Manifold" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="chp-intake.jpg" alt="Custom Intake CAD Model" class="w-full md:min-w-[85%] h-72 object-contain bg-gray-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="chp-pcb.png" alt="Custom Electronics PCB" class="w-full md:min-w-[85%] h-72 object-contain bg-white rounded-2xl snap-center shrink-0 border border-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="chp-poster.jpg" alt="ICECHP Presentation Poster" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
                     </div>
@@ -220,6 +204,7 @@
                 </div>
             </article>
 
+            <!-- Project 5: Machining & Hardware Prototyping -->
             <article class="bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 flex flex-col md:flex-row gap-12 items-center">
                 <div class="flex-1 w-full">
                     <h3 class="text-3xl font-bold mb-3 text-gray-900">Machining & Hardware Prototyping</h3>
@@ -230,29 +215,24 @@
                         <span class="px-3 py-1 bg-gray-100 text-xs font-semibold rounded-full">Precision Assembly</span>
                     </div>
                     <p class="text-gray-600 leading-relaxed mb-6">
-                        Custom hardware fabrications, pneumatically actuated test fixtures, precision-milled aluminum components, and custom hardware assemblies built in-house.
+                        Custom hardware fabrications, pneumatically actuated test fixtures, precision-milled aluminum components, and custom shifter knobs built in-house.
                     </p>
                 </div>
                 <div class="flex-1 w-full overflow-hidden relative group">
                     <button class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-lg text-gray-700 font-bold opacity-0 group-hover:opacity-100 transition z-20 hover:bg-white" onclick="scrollCarousel(this, -300)">←</button>
                     <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
+                        <img src="x_machining.jpg" alt="Precision Milled Aluminum Component" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
+                        <img src="x_tip_curve.jpg" alt="Pneumatic Tip Curving Production Fixture" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
+                        <img src="x_big_workcell.jpg" alt="Automated Manufacturing Robotic Workcell Enclosure" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                         <img src="machining-press.jpg" alt="Pneumatic Workcell Press" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="x_machining.jpg" alt="Precision Milled Aluminum Housing Plate in CNC Vise" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                         <img src="IMG_9296.jpg" alt="Pneumatic Press CAD Model" class="w-full md:min-w-[85%] h-72 object-contain bg-gray-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="IMG_9411.jpg" alt="Pneumatic Press Mechanical Assembly" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="machining-plates.jpg" alt="Milled Aluminum Plates" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="machining-bar1.jpg" alt="Custom Milled Bar Profile" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="machining-bar2.jpg" alt="Top View Milled Bar Profile" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="machining-blade.jpg" alt="Blade Measurement Setup" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="37a9e13e.jpg" alt="Various Machined Stock & Couplers" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="0392c66b.png" alt="Custom Shifter Knob Engraving" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="5924ad52.jpg" alt="Manual Milling Setup" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="ff5d2c36.jpg" alt="Pneumatic Gripper Mechanism" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                     </div>
                     <button class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-lg text-gray-700 font-bold opacity-0 group-hover:opacity-100 transition z-20 hover:bg-white" onclick="scrollCarousel(this, 300)">→</button>
                 </div>
             </article>
 
+            <!-- Project 6: Custom Large Scale 3D Printer -->
             <article class="bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 flex flex-col md:flex-row-reverse gap-12 items-center">
                 <div class="flex-1 w-full">
                     <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-semibold rounded-full border border-indigo-100 mb-3">
@@ -269,9 +249,9 @@
                         At 14 years old, I built a 500 mm × 600 mm × 900 mm large-scale 3D printer from scratch using a novel motion system I designed, built for just $450 to make large-scale printing accessible. Tackling this project without prior formal skills gave me the technical confidence to build many more 3D printers and pursue ambitious engineering challenges ever since.
                     </p>
                 </div>
-                <div class="flex-1 w-full overflow-hidden flex justify-center items-center">
-                    <div class="w-full max-w-md aspect-square rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-white p-1">
-                        <img src="Large scale 3d printer (2).jpg" alt="Custom Large Scale 3D Printer Development Grid Collage" class="w-full h-full object-contain rounded-xl" onerror="handleCarouselImgError(this)">
+                <div class="flex-1 w-full overflow-hidden relative group">
+                    <div class="w-full h-72 rounded-2xl overflow-hidden shadow-md">
+                        <img src="Large scale 3d printer (2).jpg" alt="Custom Large Scale 3D Printer Construction Grid" class="w-full h-full object-contain bg-white">
                     </div>
                 </div>
             </article>
@@ -279,6 +259,7 @@
         </div>
     </div>
 
+    <!-- SECTION 2: EXPERIENCE, EDUCATION, TEAMS & SKILLS -->
     <main id="experience" class="relative z-20 bg-gray-900 text-white py-24 border-t border-gray-800">
         <div class="max-w-5xl mx-auto px-6 space-y-24">
 
@@ -385,7 +366,7 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Aeronautics Team -->
                     <div class="bg-gray-800/60 rounded-2xl border border-gray-700/60 overflow-hidden flex flex-col">
-                        <img src="x_Plane.jpg" alt="UMass Aeronautics Aircraft Prototyping" class="w-full h-48 object-cover object-center" onerror="this.src='aeronautics-team.jpg'">
+                        <img src="aeronautics-team.jpg" alt="UMass Aeronautics Team" class="w-full h-48 object-cover object-center" onerror="this.src='x_garage_Plane.jpg'">
                         <div class="p-6 flex-1 flex flex-col justify-between">
                             <div>
                                 <h3 class="text-lg font-bold text-white mb-2">UMass Aeronautics Team</h3>
@@ -453,76 +434,45 @@
         </div>
     </main>
 
+    <!-- SCRIPT FOR DYNAMIC MAKER WALL SHUFFLING, PRIORITY STANDALONE PLACEMENT & CAROUSELS -->
     <script>
-        // Standalone photos NOT in any project carousel get primary priority for Maker Wall rendering
+        // Priority Standalone Photos (Not in any project carousel - placed first on the wall)
         const standalonePhotos = [
-            'Large scale 3d printer (2).jpg',
-            'x_garage_Plane.jpg',
-            'x_microfluidic.jpg',
-            'x_table.jpg',
-            'x_Garage.jpg',
-            'x_Dremel_CNC.jpg',
-            'x_Tilted_Bridgeport.jpg',
-            'x_Mantlepiece.jpg',
-            'x_CAD.jpg',
-            'x_Knife.jpg',
-            'x_Plasma_Cutter.jpg',
-            '73014711244__5A93A7A8-A47D-4735-8A12-DA50B30E7B1D_2.jpg',
-            '3464462f.png',
-            'IMG_6380.jpg',
-            '7a4bcb59.jpg',
-            'IMG_3823_2.jpg',
-            'other-car-driveway.jpg',
-            'IMG_6399.jpg',
-            '73265325127__31D2964E-8FE2-422E-8BBE-9F217E0308FF_2.jpg',
-            'a30adf7c.png',
-            'IMG_7181.jpg',
-            'IMG_4223_2.jpg',
-            '48c8f770.jpg',
-            'IMG_7308.jpg',
-            'e7f70991.png',
-            'IMG_4718_2.jpg',
-            '501df425.jpg',
-            'IMG_7323.jpg',
-            'fe8c7824.png',
-            'IMG_4961 (1).jpg',
-            'IMG_7355.jpg',
-            'f90e94ad.jpg',
-            '1096932f.jpg',
-            'IMG_5098.jpg',
-            'IMG_7487.jpg',
-            '7c6b7bc4.jpg',
-            'IMG_5133.jpg',
-            'a4bbd03c.jpg',
-            'IMG_7505.jpg',
-            '66f1f7b0.jpg',
-            'IMG_5176.jpg',
-            'IMG_7566.jpg',
-            'd9a1dffe.jpg',
-            'a0693d29.jpg',
-            'IMG_5464.jpg',
-            'f26968ab.jpg',
-            'IMG_7695.jpg',
-            'other-cnc-router.jpg',
-            'fe9038f0.jpg',
-            '74961043968__3480A616-FAB1-42A0-8460-8A30423D69E4.jpg',
-            'IMG_5884.jpg',
-            'other-clutch.jpg',
-            'IMG_5998.jpg',
-            '75400904826__00C1307C-DC00-4F63-ADE3-81F9C3A13B24.jpg',
-            'Resized_20241207_110649_1733588654514.jpg',
-            'Resized_20241207_162414_1733623751408.jpg',
-            'IMG_6189.jpg',
-            'IMG_6227.jpg'
+            'x_microfluidic.jpg', 'x_table.jpg', 'x_Plane.jpg', 'x_garage_Plane.jpg',
+            'x_Dremel_CNC.jpg', 'x_Tilted_Bridgeport.jpg', 'x_Mantlepiece.jpg', 
+            'x_Knife.jpg', 'x_Plasma_Cutter.jpg'
         ];
 
-        // Carousel photos serve as secondary fill material for the background grid
+        // Carousel / Project Photos (Placed after standalone photos)
         const carouselPhotos = [
-            'IMG_5467.jpg', 'Ground Plane.png', 'Full Schematic.png',
-            'bioprinter-cover-new.jpg', 'x_Bioprinter_Head.jpg', 'bioprinter-main.jpg', 'IMG_9617.jpg', '1c716f75.jpg', '1296f8f3.jpg', '1839ed07.jpg',
-            '944-side-profile-farm.jpg', 'x_Primer.jpg', 'x_under_car.jpg', 'x_doorcard.jpg', 'x_shift_knob.jpg', 'IMG_9062.jpg', 'IMG_9064.jpg', 'IMG_9271.jpg', 'IMG_9498.jpg', '5bcbb0b7.jpg', '3bb257d8.jpg', '2c5d74b0.jpg', '944-restomod-interior-1.jpg', '944-restomod-interior-2.jpg', '944-restomod-shifter.jpg', '944-door-cards.jpg', '12bc95c2.jpg', '944-restomod-welding.jpg', '944-restomod-wheel-painting.jpg', '944-restomod-wheels.jpg', '944-wing-hood.jpg', '944-wing-rear.jpg', '177595bf.jpg', '83416923.jpg', 'e14d57ac.jpg',
-            'chp-diagram.png', 'x_gear_case.jpg', 'x_printed_intake.jpg', 'x_intake_CAD.jpg', 'IMG_9656.jpg', 'chp-intake.jpg', 'chp-pcb.png', 'chp-poster.jpg',
-            'machining-press.jpg', 'x_machining.jpg', 'IMG_9296.jpg', 'IMG_9411.jpg', 'machining-plates.jpg', 'machining-bar1.jpg', 'machining-bar2.jpg', 'machining-blade.jpg', '37a9e13e.jpg', '0392c66b.png', '5924ad52.jpg', 'ff5d2c36.jpg'
+            'IMG_5467.jpg', 'Full Schematic.png', 'Ground Plane.png',
+            'x_Bioprinter_Head.jpg', 'bioprinter-cover-new.jpg', 'bioprinter-main.jpg', 
+            'IMG_9617.jpg', '1c716f75.jpg', '1296f8f3.jpg', '1839ed07.jpg', 
+            'x_Gloss_paint.jpg', 'x_paintbooth.jpg', 'x_doorcard.jpg', 'x_shift_knob.jpg',
+            'x_Primer.jpg', 'x_under_car.jpg', '944-side-profile-farm.jpg',
+            'chp-diagram.png', 'x_gear_case.jpg', 'x_intake_CAD.jpg', 'x_printed_intake.jpg',
+            'chp-intake.jpg', 'chp-pcb.png', 'chp-poster.jpg', 'x_machining.jpg',
+            'x_tip_curve.jpg', 'x_big_workcell.jpg', 'machining-press.jpg',
+            'IMG_9296.jpg', 'IMG_9411.jpg', 'Large scale 3d printer (2).jpg',
+            '5bcbb0b7.jpg', 'IMG_9062.jpg', '3464462f.png', 'IMG_6380.jpg',
+            '7a4bcb59.jpg', 'IMG_9064.jpg', 'other-car-driveway.jpg',
+            'IMG_6399.jpg', 'a30adf7c.png', 'IMG_9271.jpg', '2c5d74b0.jpg',
+            'IMG_7181.jpg', '48c8f770.jpg', 'machining-fixture.jpg',
+            'IMG_7308.jpg', 'e7f70991.png', 'IMG_7323.jpg', 'IMG_9498.jpg',
+            'fe8c7824.png', '944-restomod-interior-1.jpg', 'f90e94ad.jpg',
+            '1096932f.jpg', 'IMG_5098.jpg', 'machining-plates.jpg', 'IMG_9397.jpg',
+            'IMG_7487.jpg', '7c6b7bc4.jpg', '944-restomod-shifter.jpg',
+            'IMG_5133.jpg', 'a4bbd03c.jpg', 'IMG_7505.jpg', '66f1f7b0.jpg',
+            'IMG_5176.jpg', 'IMG_7566.jpg', 'IMG_9656.jpg', 'd9a1dffe.jpg',
+            'a0693d29.jpg', 'IMG_5464.jpg', '944-door-cards.jpg', 'f26968ab.jpg',
+            'IMG_7695.jpg', 'other-cnc-router.jpg', 'fe9038f0.jpg',
+            'machining-bar1.jpg', '12bc95c2.jpg', 'IMG_5884.jpg', 'other-clutch.jpg',
+            'machining-bar2.jpg', '944-restomod-welding.jpg', 'IMG_5998.jpg',
+            'machining-blade.jpg', '944-restomod-wheel-painting.jpg', '37a9e13e.jpg',
+            '944-restomod-wheels.jpg', '0392c66b.png', '944-wing-hood.jpg',
+            '5924ad52.jpg', 'IMG_6189.jpg', '944-wing-rear.jpg', 'ff5d2c36.jpg',
+            'IMG_6227.jpg', '177595bf.jpg', '83416923.jpg', 'e14d57ac.jpg',
+            '3bb257d8.jpg', '944-restomod-interior-2.jpg'
         ];
 
         function shuffleArray(array) {
@@ -543,20 +493,19 @@
             const gridWidth = gridContainer.clientWidth || window.innerWidth;
             const columns = Math.floor(gridWidth / 140) || 1;
             const rows = 12; 
-            const totalRequiredSlots = Math.max(standalonePhotos.length + carouselPhotos.length, columns * rows);
+            const minRequiredSlots = Math.max(standalonePhotos.length + carouselPhotos.length, columns * rows);
 
-            // Prioritize standalone non-carousel photos first
-            let finalImages = [...shuffleArray(standalonePhotos)];
+            // Give standalone photos first priority in the grid array
+            let masterList = [...shuffleArray(standalonePhotos)];
             
-            // Append shuffled carousel photos to fill remaining background slots
-            while (finalImages.length < totalRequiredSlots) {
-                finalImages = finalImages.concat(shuffleArray(carouselPhotos));
+            while (masterList.length < minRequiredSlots) {
+                masterList = masterList.concat(shuffleArray(carouselPhotos));
             }
 
-            finalImages.forEach(src => {
+            masterList.forEach(src => {
                 const img = document.createElement('img');
                 img.src = src;
-                img.alt = 'Maker Wall';
+                img.alt = 'Maker Wall Asset';
                 img.onerror = function() {
                     this.style.display = 'none';
                 };
