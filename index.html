@@ -154,7 +154,7 @@
                 </div>
             </article>
 
-            <!-- Project 3: Porsche 944 Restomod (RED CAR IMAGE REMOVED) -->
+            <!-- Project 3: Porsche 944 Restomod -->
             <article class="bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 flex flex-col md:flex-row gap-12 items-center">
                 <div class="flex-1 w-full">
                     <h3 class="text-3xl font-bold mb-3 text-gray-900">944 Restomod</h3>
@@ -333,7 +333,7 @@
                         </div>
                     </div>
 
-                    <!-- Klona Biotech (FIXED IMAGE & ENCODING FALLBACK) -->
+                    <!-- Klona Biotech (AUTOMATIC MULTI-EXTENSION FALLBACK) -->
                     <div class="bg-gray-800/60 p-8 rounded-2xl border border-gray-700/60 hover:border-blue-500/50 transition flex flex-col lg:flex-row gap-6 items-start justify-between">
                         <div class="flex-1">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-4">
@@ -352,8 +352,24 @@
                                 <li>• Create test plans to analyze print performance under cost constraints. Machine printer components to reduce cost and lead times.</li>
                             </ul>
                         </div>
-                        <div class="w-full lg:w-56 h-48 lg:h-48 shrink-0 rounded-xl overflow-hidden border border-gray-700/80 shadow-md bg-black">
-                            <img src="3d printer render Klona.jpg" alt="Klona Biotech 3D Printer CAD Render" class="w-full h-full object-contain hover:scale-105 transition duration-300" onerror="if(!this.dataset.tried){this.dataset.tried=true;this.src='3d%20printer%20render%20Klona.jpg';}">
+                        <div class="w-full lg:w-56 h-48 lg:h-48 shrink-0 rounded-xl overflow-hidden border border-gray-700/80 shadow-md bg-black flex items-center justify-center">
+                            <img src="3d printer render Klona.png" 
+                                 alt="Klona Biotech 3D Printer CAD Render" 
+                                 class="w-full h-full object-contain hover:scale-105 transition duration-300" 
+                                 onerror="
+                                    const sources = [
+                                        '3d printer render Klona.jpg',
+                                        '3d%20printer%20render%20Klona.png',
+                                        '3d%20printer%20render%20Klona.jpg',
+                                        '3d_printer_render_Klona.png',
+                                        '3d_printer_render_Klona.jpg'
+                                    ];
+                                    let step = parseInt(this.dataset.step || 0);
+                                    if (step < sources.length) {
+                                        this.dataset.step = step + 1;
+                                        this.src = sources[step];
+                                    }
+                                 ">
                         </div>
                     </div>
 
@@ -498,7 +514,7 @@
 
         // Carousel / Project Photos (Placed after standalone photos)
         const carouselPhotos = [
-            'Lex Med Workcell.jpg', '3d printer render Klona.jpg', 'Formlabs Test Print.jpg', 'Millwright CNC Makerspace.jpg',
+            'Lex Med Workcell.jpg', '3d printer render Klona.jpg', '3d printer render Klona.png', 'Formlabs Test Print.jpg', 'Millwright CNC Makerspace.jpg',
             'IMG_5467.jpg', 'Full Schematic.png', 'Ground Plane.png',
             'x_Bioprinter_Head.jpg', 'bioprinter-cover-new.jpg', 'bioprinter-main.jpg', 
             'IMG_9617.jpg', '1c716f75.jpg', '1296f8f3.jpg', '1839ed07.jpg', 
