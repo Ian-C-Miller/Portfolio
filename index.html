@@ -51,7 +51,7 @@
                 Ian Miller
             </h1>
             <p class="text-base text-gray-300 leading-relaxed mb-8">
-                I am a Biomedical Engineering and Economics student at UMass Amherst driven by a passion for solving complex problems, learning new skills, and using engineering to help people.
+                I am a Biomedical Engineering and Economics student at UMass Amherst driven by a passion for solving complex problems, learning new skills, and most importantly using my engineering skills to help people.
             </p>
             <div class="flex flex-wrap gap-4">
                 <a href="#projects" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-xl hover:bg-blue-500 transition shadow-lg flex items-center gap-2">
@@ -81,10 +81,10 @@
                 <p class="text-gray-600 mt-2">Mechanical prototyping, bioprinting platforms, embedded electronics, and energy systems.</p>
             </div>
 
-            <!-- Project 1: Large Scale Fresh Bioprinter -->
+            <!-- Project 1: Large Scale FRESH Bioprinter -->
             <article class="bg-white/95 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 flex flex-col md:flex-row gap-12 items-center">
                 <div class="flex-1 w-full">
-                    <h3 class="text-3xl font-bold mb-3 text-gray-900">Large Scale Fresh Bioprinter</h3>
+                    <h3 class="text-3xl font-bold mb-3 text-gray-900">Large Scale FRESH Bioprinter</h3>
                     <div class="flex flex-wrap gap-2 mb-6">
                         <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full border border-emerald-100">Machining</span>
                         <span class="px-3 py-1 bg-gray-100 text-xs font-semibold rounded-full">CAD</span>
@@ -97,7 +97,9 @@
                     </p>
                 </div>
                 <div class="flex-1 w-full overflow-hidden relative group">
-                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 font-bold opacity-70 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, -300)">←</button>
+                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-40 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, -300)" aria-label="Scroll Left">
+                        <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                    </button>
                     <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
                         <div class="w-full md:min-w-[85%] h-72 rounded-2xl overflow-hidden snap-center shrink-0 shadow-md bg-black relative">
                             <iframe 
@@ -116,7 +118,9 @@
                         <img src="1296f8f3.jpg" alt="Bioprinter Wiper Mechanism" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                         <img src="1839ed07.jpg" alt="Bioprinter Control Board & Power Supply" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                     </div>
-                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 font-bold opacity-70 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, 300)">→</button>
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-40 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, 300)" aria-label="Scroll Right">
+                        <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                    </button>
                 </div>
             </article>
 
@@ -132,17 +136,21 @@
                         <span class="px-3 py-1 bg-gray-100 text-xs font-semibold rounded-full">Automotive</span>
                     </div>
                     <p class="text-gray-600 leading-relaxed mb-6">
-                        Designed and programmed an STM32G0 microcontroller PCB to condition modern Mass Air Flow (MAF) sensor signals and translate them into 12V Air Flow Meter (AFM) voltage curves required by early Porsche 944 Motronic DME engine management units.
+                        Designed and programmed an STM32 microcontroller PCB to interpret modern MAF data and translate signal curves, integrating modern airflow hardware seamlessly into an older engine management system.
                     </p>
                 </div>
                 <div class="flex-1 w-full overflow-hidden relative group">
-                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 font-bold opacity-70 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, -300)">←</button>
+                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-40 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, -300)" aria-label="Scroll Left">
+                        <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                    </button>
                     <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
                         <img src="IMG_5467.jpg" alt="STM32G0 Porsche MAF Converter Assembled PCB" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="Full Schematic.png" alt="KiCAD Circuit Schematic Diagram" class="w-full md:min-w-[85%] h-72 object-contain bg-gray-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="Ground Plane.png" alt="KiCAD PCB Layout & Ground Plane" class="w-full md:min-w-[85%] h-72 object-contain bg-black rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
                     </div>
-                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 font-bold opacity-70 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, 300)">→</button>
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-40 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, 300)" aria-label="Scroll Right">
+                        <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                    </button>
                 </div>
             </article>
 
@@ -161,7 +169,9 @@
                     </p>
                 </div>
                 <div class="flex-1 w-full overflow-hidden relative group">
-                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 font-bold opacity-70 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, -300)">←</button>
+                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-40 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, -300)" aria-label="Scroll Left">
+                        <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                    </button>
                     <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
                         <img src="944-side-profile-farm.jpg" alt="Porsche 944 Farm Profile" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                         <img src="x_Gloss_paint.jpg" alt="Porsche 944 Fresh Green Paint Finish" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
@@ -181,7 +191,9 @@
                         <img src="x_under_car.jpg" alt="Working Underneath Car Drivetrain" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                         <img src="other-car-driveway.jpg" alt="Porsche 944 Driveway Profile" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                     </div>
-                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 font-bold opacity-70 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, 300)">→</button>
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-40 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, 300)" aria-label="Scroll Right">
+                        <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                    </button>
                 </div>
             </article>
 
@@ -200,7 +212,9 @@
                     </p>
                 </div>
                 <div class="flex-1 w-full overflow-hidden relative group">
-                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 font-bold opacity-70 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, -300)">←</button>
+                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-40 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, -300)" aria-label="Scroll Left">
+                        <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                    </button>
                     <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
                         <img src="chp-diagram.png" alt="ICECHP System Diagram" class="w-full md:min-w-[85%] h-72 object-contain bg-white rounded-2xl snap-center shrink-0 border border-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="x_gear_case.jpg" alt="Engine Crankcase & Gear Internal Assembly" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
@@ -210,7 +224,9 @@
                         <img src="chp-pcb.png" alt="Custom Electronics PCB" class="w-full md:min-w-[85%] h-72 object-contain bg-white rounded-2xl snap-center shrink-0 border border-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="chp-poster.jpg" alt="ICECHP Presentation Poster" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
                     </div>
-                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 font-bold opacity-70 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, 300)">→</button>
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-40 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, 300)" aria-label="Scroll Right">
+                        <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                    </button>
                 </div>
             </article>
 
@@ -225,20 +241,29 @@
                         <span class="px-3 py-1 bg-gray-100 text-xs font-semibold rounded-full">Precision Assembly</span>
                     </div>
                     <p class="text-gray-600 leading-relaxed mb-6">
-                        Custom hardware fabrications, pneumatically actuated test fixtures, precision-milled aluminum components, and custom shifter knobs built in-house.
+                        Rapid turnaround manual and CNC machining from both my personal 3D printing and automotive work and professional manufacturing components.
                     </p>
                 </div>
                 <div class="flex-1 w-full overflow-hidden relative group">
-                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 font-bold opacity-70 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, -300)">←</button>
+                    <button class="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-40 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, -300)" aria-label="Scroll Left">
+                        <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+                    </button>
                     <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
-                        <img src="x_machining.jpg" alt="Precision Milled Aluminum Component" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="x_tip_curve.jpg" alt="Pneumatic Tip Curving Production Fixture" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="x_big_workcell.jpg" alt="Automated Manufacturing Robotic Workcell Enclosure" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
-                        <img src="machining-press.jpg" alt="Pneumatic Workcell Press" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
+                        <img src="x_machining.jpg" alt="Precision Milled Aluminum Component" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="machining-bar1.jpg" alt="Machined Stock Component" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="machining-bar2.jpg" alt="Machining Setup Bar" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="machining-blade.jpg" alt="Milled Cutter Blade Hardware" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="machining-plates.jpg" alt="Precision Milled Plates" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="machining-press.jpg" alt="Pneumatic Workcell Press" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="x_tip_curve.jpg" alt="Pneumatic Tip Curving Production Fixture" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="x_big_workcell.jpg" alt="Automated Manufacturing Robotic Workcell Enclosure" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="x_Tilted_Bridgeport.jpg" alt="Bridgeport Manual Mill Machining Workstation" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="IMG_9296.jpg" alt="Pneumatic Press CAD Model" class="w-full md:min-w-[85%] h-72 object-contain bg-gray-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
-                        <img src="IMG_9411.jpg" alt="Pneumatic Press Mechanical Assembly" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
+                        <img src="IMG_9411.jpg" alt="Pneumatic Press Mechanical Assembly" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
                     </div>
-                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 font-bold opacity-70 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, 300)">→</button>
+                    <button class="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 bg-white/80 backdrop-blur rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-40 hover:opacity-100 hover:bg-white transition z-20" onclick="scrollCarousel(this, 300)" aria-label="Scroll Right">
+                        <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+                    </button>
                 </div>
             </article>
 
@@ -273,7 +298,7 @@
     <main id="experience" class="relative z-20 bg-gray-900 text-white py-24 border-t border-gray-800">
         <div class="max-w-5xl mx-auto px-6 space-y-24">
 
-            <!-- WORK EXPERIENCE SECTION WITH UPDATED PHOTO CARDS -->
+            <!-- WORK EXPERIENCE SECTION -->
             <section class="scroll-mt-12">
                 <div class="flex items-center gap-3 mb-10">
                     <div class="p-2.5 bg-blue-500/10 rounded-xl text-blue-400 border border-blue-500/20">
@@ -304,8 +329,8 @@
                                 <li>• Designed, machined, built, iterated, and documented a tip curving fixture for production in 5 weeks.</li>
                             </ul>
                         </div>
-                        <div class="w-full lg:w-56 h-48 lg:h-52 shrink-0 rounded-xl overflow-hidden border border-gray-700/80 shadow-md">
-                            <img src="Lex Med Workcell.jpg" alt="Lexington Medical Automated Workcell" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300" onerror="this.style.display='none'">
+                        <div class="w-full lg:w-56 h-48 lg:h-52 shrink-0 rounded-xl overflow-hidden border border-gray-700/80 shadow-md bg-gray-800">
+                            <img src="Lex Med Workcell.jpg" alt="Lexington Medical Automated Workcell" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300">
                         </div>
                     </div>
 
@@ -328,8 +353,8 @@
                                 <li>• Create test plans to analyze print performance under cost constraints. Machine printer components to reduce cost and lead times.</li>
                             </ul>
                         </div>
-                        <div class="w-full lg:w-56 h-48 lg:h-44 shrink-0 rounded-xl overflow-hidden border border-gray-700/80 shadow-md">
-                            <img src="3d printer render Klona.jpg" alt="Klona Biotech 3D Printer CAD Render" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300" onerror="this.style.display='none'">
+                        <div class="w-full lg:w-56 h-48 lg:h-48 shrink-0 rounded-xl overflow-hidden border border-gray-700/80 shadow-md bg-gray-800">
+                            <img src="3d printer render Klona.jpg" alt="Klona Biotech 3D Printer CAD Render" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300">
                         </div>
                     </div>
 
@@ -352,8 +377,8 @@
                                 <li>• Utilized precision measurement tools to improve print reliability.</li>
                             </ul>
                         </div>
-                        <div class="w-full lg:w-56 h-48 lg:h-44 shrink-0 rounded-xl overflow-hidden border border-gray-700/80 shadow-md">
-                            <img src="Formlabs Test Print.jpg" alt="Formlabs SLA Resin Test Print Batch" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300" onerror="this.style.display='none'">
+                        <div class="w-full lg:w-56 h-48 lg:h-44 shrink-0 rounded-xl overflow-hidden border border-gray-700/80 shadow-md bg-gray-800">
+                            <img src="Formlabs Test Print.jpg" alt="Formlabs SLA Resin Test Print Batch" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300">
                         </div>
                     </div>
 
@@ -376,8 +401,8 @@
                                 <li>• Manage purchasing for equipment and materials.</li>
                             </ul>
                         </div>
-                        <div class="w-full lg:w-56 h-48 lg:h-44 shrink-0 rounded-xl overflow-hidden border border-gray-700/80 shadow-md">
-                            <img src="Millwright CNC Makerspace.jpg" alt="MillRight Mega V2 CNC Router in UMass Makerspace" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300" onerror="this.style.display='none'">
+                        <div class="w-full lg:w-56 h-48 lg:h-44 shrink-0 rounded-xl overflow-hidden border border-gray-700/80 shadow-md bg-gray-800">
+                            <img src="Millwright CNC Makerspace.jpg" alt="MillRight Mega V2 CNC Router in UMass Makerspace" class="w-full h-full object-cover object-center hover:scale-105 transition duration-300">
                         </div>
                     </div>
                 </div>
@@ -469,8 +494,7 @@
         // Priority Standalone Photos (Not in any project carousel - placed first on the wall)
         const standalonePhotos = [
             'x_microfluidic.jpg', 'x_table.jpg', 'x_Plane.jpg', 'x_garage_Plane.jpg',
-            'x_Dremel_CNC.jpg', 'x_Tilted_Bridgeport.jpg', 'x_Mantlepiece.jpg', 
-            'x_Knife.jpg', 'x_Plasma_Cutter.jpg'
+            'x_Dremel_CNC.jpg', 'x_Mantlepiece.jpg', 'x_Knife.jpg', 'x_Plasma_Cutter.jpg'
         ];
 
         // Carousel / Project Photos (Placed after standalone photos)
@@ -486,19 +510,20 @@
             'x_Primer.jpg', 'x_under_car.jpg', '944-side-profile-farm.jpg', 'other-car-driveway.jpg',
             'chp-diagram.png', 'x_gear_case.jpg', 'x_intake_CAD.jpg', 'x_printed_intake.jpg',
             'chp-intake.jpg', 'chp-pcb.png', 'chp-poster.jpg', 'x_machining.jpg',
-            'x_tip_curve.jpg', 'x_big_workcell.jpg', 'machining-press.jpg',
+            'machining-bar1.jpg', 'machining-bar2.jpg', 'machining-blade.jpg', 'machining-plates.jpg',
+            'machining-press.jpg', 'x_tip_curve.jpg', 'x_big_workcell.jpg', 'x_Tilted_Bridgeport.jpg',
             'IMG_9296.jpg', 'IMG_9411.jpg', 'Large scale 3d printer (2).jpg',
             '5bcbb0b7.jpg', 'IMG_9062.jpg', '3464462f.png', 'IMG_6380.jpg',
             '7a4bcb59.jpg', 'IMG_9064.jpg', 'IMG_6399.jpg', 'a30adf7c.png', 'IMG_9271.jpg', '2c5d74b0.jpg',
             'IMG_7181.jpg', '48c8f770.jpg', 'machining-fixture.jpg',
             'IMG_7308.jpg', 'e7f70991.png', 'IMG_7323.jpg', 'IMG_9498.jpg',
-            'fe8c7824.png', 'f90e94ad.jpg', '1096932f.jpg', 'IMG_5098.jpg', 'machining-plates.jpg', 'IMG_9397.jpg',
+            'fe8c7824.png', 'f90e94ad.jpg', '1096932f.jpg', 'IMG_5098.jpg', 'IMG_9397.jpg',
             'IMG_7487.jpg', '7c6b7bc4.jpg', 'IMG_5133.jpg', 'a4bbd03c.jpg', 'IMG_7505.jpg', '66f1f7b0.jpg',
             'IMG_5176.jpg', 'IMG_7566.jpg', 'IMG_9656.jpg', 'd9a1dffe.jpg',
             'a0693d29.jpg', 'IMG_5464.jpg', 'f26968ab.jpg',
             'IMG_7695.jpg', 'other-cnc-router.jpg', 'fe9038f0.jpg',
-            'machining-bar1.jpg', '12bc95c2.jpg', 'IMG_5884.jpg', 'other-clutch.jpg',
-            'machining-bar2.jpg', 'IMG_5998.jpg', 'machining-blade.jpg', '37a9e13e.jpg',
+            '12bc95c2.jpg', 'IMG_5884.jpg', 'other-clutch.jpg',
+            'IMG_5998.jpg', '37a9e13e.jpg',
             '0392c66b.png', '5924ad52.jpg', 'IMG_6189.jpg', 'ff5d2c36.jpg',
             'IMG_6227.jpg', '177595bf.jpg', '83416923.jpg', 'e14d57ac.jpg',
             '3bb257d8.jpg'
