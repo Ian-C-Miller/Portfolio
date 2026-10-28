@@ -106,6 +106,9 @@
                                 allowfullscreen>
                             </iframe>
                         </div>
+                        <img src="reFRESH Hardware development.jpg" alt="reFRESH Hardware Development CAD and Prototype" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="reFRESH Process.png" alt="reFRESH Layer Recoating Process Diagram" class="w-full md:min-w-[85%] h-72 object-contain bg-white rounded-2xl snap-center shrink-0 border border-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
+                        <img src="reFRESH wiper.jpg" alt="reFRESH Recoating Wiper Mechanism" class="w-full md:min-w-[85%] h-72 object-contain bg-gray-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="bioprinter-cover-new.jpg" alt="Bioprinter Main Front View" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                         <img src="x_Bioprinter_Head.jpg" alt="Bioprinter Syringe & Peristaltic Toolhead" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                         <img src="bioprinter-main.jpg" alt="Bioprinter Gantry & Extruder" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
@@ -172,6 +175,7 @@
                     </button>
                     <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
                         <img src="944-side-profile-farm.jpg" alt="Porsche 944 Farm Profile" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
+                        <img src="Headlight Housing.png" alt="Custom Headlight Housing CAD Render" class="w-full md:min-w-[85%] h-72 object-contain bg-slate-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="x_Gloss_paint.jpg" alt="Porsche 944 Fresh Green Paint Finish" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                         <img src="x_paintbooth.jpg" alt="Inflatable Paint Booth Workstation" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
                         <img src="x_doorcard.jpg" alt="Custom Leather Porsche Door Card Assembly" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 bg-gray-100" onerror="handleCarouselImgError(this)">
@@ -213,6 +217,7 @@
                         <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
                     </button>
                     <div class="carousel flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-4 relative z-10">
+                        <img src="Biogas Intake.jpg" alt="Biogas Custom Intake Manifold CAD Model" class="w-full md:min-w-[85%] h-72 object-contain bg-white rounded-2xl snap-center shrink-0 border border-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="chp-diagram.png" alt="ICECHP System Diagram" class="w-full md:min-w-[85%] h-72 object-contain bg-white rounded-2xl snap-center shrink-0 border border-gray-100 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="x_gear_case.jpg" alt="Engine Crankcase & Gear Internal Assembly" class="w-full md:min-w-[85%] h-72 object-cover object-center rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
                         <img src="x_intake_CAD.jpg" alt="Engine Intake Manifold CAD Design" class="w-full md:min-w-[85%] h-72 object-contain bg-gray-900 rounded-2xl snap-center shrink-0 shadow-md" onerror="handleCarouselImgError(this)">
@@ -494,14 +499,22 @@
 
     <!-- SCRIPT FOR DYNAMIC MAKER WALL SHUFFLING, PRIORITY STANDALONE PLACEMENT & CAROUSELS -->
     <script>
-        // Priority Standalone Photos (Not in any project carousel - placed first on the wall)
+        // Priority Standalone Photos (Not in any project carousel - given top priority placement on the wall)
         const standalonePhotos = [
-            'x_microfluidic.jpg', 'x_table.jpg', 'x_Plane.jpg', 'x_garage_Plane.jpg',
-            'x_Dremel_CNC.jpg', 'x_Mantlepiece.jpg', 'x_Knife.jpg', 'x_Plasma_Cutter.jpg'
+            'Cell Staining.jpg',
+            'x_microfluidic.jpg', 
+            'x_table.jpg', 
+            'x_Plane.jpg', 
+            'x_garage_Plane.jpg',
+            'x_Dremel_CNC.jpg', 
+            'x_Mantlepiece.jpg', 
+            'x_Knife.jpg', 
+            'x_Plasma_Cutter.jpg'
         ];
 
         // Carousel / Project Photos (Placed after standalone photos)
         const carouselPhotos = [
+            'Headlight Housing.png', 'reFRESH Hardware development.jpg', 'reFRESH Process.png', 'reFRESH wiper.jpg', 'Biogas Intake.jpg',
             'Lex Med Workcell.jpg', '3d printer render Klona.jpg', '3d printer render Klona.png', 'Formlabs Test Print.jpg', 'Millwright CNC Makerspace.jpg',
             'IMG_6141.jpeg', 'IMG_6141.jpg', '944 MAF converter assembly.png', '944 MAF converter assembly.jpg', 'Full Schematic.png', 'Ground Plane.png',
             'x_Bioprinter_Head.jpg', 'bioprinter-cover-new.jpg', 'bioprinter-main.jpg', 
